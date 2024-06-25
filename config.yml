@@ -1,0 +1,17 @@
+batch_size: 500
+device: 'cuda'
+num_workers: 2
+data_dir: './mydataset'
+
+attack: 'PGD'
+eps_list: [0.0, 0.1, 0.2, 0.3]
+norm: 'Linf'
+detector: 'reduce'
+sqeeze_list: ['reduce', 'median_filter']
+
+num_iters: 1000
+log_every: 100
+linf_bound: 0.0
+freq_dims: 32
+order: 'rand'
+stride: 7
